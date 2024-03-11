@@ -39,4 +39,13 @@ class ArrayCharTest {
 		assertEquals(3, arrayChar1.lastIndexOf('2'));
 		assertEquals(-1, arrayChar1.lastIndexOf('9'));
 	}
+	
+	@Test
+	void containsOutsideUpdateTest() {
+		char[] ar1 = {'1', '2', '3', '2'}; //"1232"
+		ArrayChar arrayChar1 = new ArrayChar(ar1);
+		ar1[2] = 'a';
+		assertTrue(arrayChar1.contains('3'));
+		assertFalse(arrayChar1.contains('a'));
+	}
 }
