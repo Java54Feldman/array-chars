@@ -68,4 +68,14 @@ public class ArrayChar {
 	public boolean equalsIgnoreCase(ArrayChar another) {
 		return another != null && compareToIgnoreCase(another) == 0;
 	}
+	
+	public int count(char character) {
+		   int result = 0;
+		   for(int i = 0; i < array.length; i++) {
+			   if(array[i] == character) {
+				   result++;
+			   }
+		   }
+		   return result;
+	   }
 }
